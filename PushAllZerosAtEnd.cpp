@@ -1,3 +1,15 @@
+/*Algorithm
+Push all Zeros to the end of an array
+
+1.Traverse the entire array from left to right
+2.Keep track of the non-zero numbers and maintain their count in a variable 'count'
+3.If the number is non-zero, put the number at arr[count] i.e. arr[count]=arr[i] and increment the count
+4.After the traversal, all the non-zero elements are already at the beginning of the array and now we need to 
+use 'count' as the first index of 0
+5. Run a while loop till the end of the array, to make all the elements 0
+
+*/
+
 #include<iostream>
 #include<vector>
 
