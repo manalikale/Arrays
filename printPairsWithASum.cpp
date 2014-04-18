@@ -1,4 +1,3 @@
-
 /*
  Given an array A[] of n numbers and another number x, determine if there are two numbers in A[] that have a sum equal to x
  1. Initialize a map M
