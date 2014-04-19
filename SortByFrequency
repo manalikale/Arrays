@@ -1,6 +1,5 @@
-
 /*
-
+ 
  Sort elements by ferquency:
  
  */
@@ -11,19 +10,24 @@
 using namespace std;
 
 
-struct Node{
+class Node{
+    
+public:
+    
     int data;
     int freq;
     Node *left;
     Node *right;
-    
-    Node(int data){
-        freq = 1;
-        this->data = data;
-        left = right = NULL;
-    }
+    Node(int data);
+    ~Node();
 };
 
+Node::Node(int data)
+{
+    freq = 1;
+    this->data = data;
+    left = right = NULL;
+}
 
 class BST{
 public:
@@ -88,7 +92,7 @@ void BST::insert(int data)
     }
 }
 
- bool BST::compare(Node *a, Node *b)
+bool BST::compare(Node *a, Node *b)
 {
     return a->freq > b->freq;
 }
