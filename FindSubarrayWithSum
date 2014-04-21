@@ -18,7 +18,9 @@ int subArraySum(std::vector<int>vect, int sum)
 {
     /* Initialize curr_sum as value of first element
      and starting point as 0 */
-    int curr_sum = vect[0], start = 0, i;
+    int curr_sum = vect[0];
+    int start = 0;
+    int i;
     
     /* Add elements one by one to curr_sum and if the curr_sum exceeds the
      sum, then remove starting element */
@@ -34,7 +36,7 @@ int subArraySum(std::vector<int>vect, int sum)
         // If curr_sum becomes equal to sum, then return true
         if (curr_sum == sum)
         {
-            printf ("Sum found between indexes %d and %d", start, i-1);
+            std::cout<<"Sum found between indexes:"<<start<<" "<<"and"<<" "<<i-1<<std::endl;
             return 1;
         }
         
@@ -44,7 +46,7 @@ int subArraySum(std::vector<int>vect, int sum)
     }
     
     // If we reach here, then no subarray
-    std::cout<< "No subarray found";
+    std::cout<< "No subarray found"<<std::endl;
     return 0;
 }
 
