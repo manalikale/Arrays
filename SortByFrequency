@@ -6,7 +6,7 @@
 #include<iostream>
 #include<vector>
 #include<map>
-#include<stdio.h>
+#include<algorithm>
 using namespace std;
 
 
@@ -37,7 +37,7 @@ public:
     void insert(int data);
     static bool compare(Node *a, Node *b);
     std::vector<int>sortByFreq();
-    Node* newnode(int data);
+   // Node* newnode(int data);
     
 private:
     Node *root;
@@ -103,7 +103,7 @@ std::vector<int> BST::sortByFreq()
     
     std::vector<int>result;
     
-    for(int i=0; i<nodeHolder.size();i++)
+    for(unsigned int i=0; i<nodeHolder.size();i++)
     {
         for(int j=0;j<nodeHolder[i]->freq;j++)
         {
@@ -118,13 +118,13 @@ int main()
     std::vector<int>vect={1,8,2,3,3,4,5,5,4};
     
     BST bsttree;
-    for(int i=0;i<vect.size();i++)
+    for(unsigned int i=0;i<vect.size();i++)
     {
         bsttree.insert(vect[i]);
     }
     
     std::vector<int>sortedVector=bsttree.sortByFreq();
-    for(int i=0;i<sortedVector.size();i++)
+    for(unsigned int i=0;i<sortedVector.size();i++)
     {
         cout << sortedVector[i]<< " ";
     }
