@@ -17,8 +17,8 @@ int minSumSubArray(std::vector<int>vect)
     int right=0;
     int sum=INT_MAX;
     int currentMinSum=0;
-    int maxLeft=0;
-    int maxRight=0;
+    int minLeft=0;
+    int minRight=0;
     for(int i=0;i<vect.size();i++)
     {
         currentMinSum+=vect[i];
@@ -26,8 +26,8 @@ int minSumSubArray(std::vector<int>vect)
         {
             sum=currentMinSum;
             right=i;
-            maxLeft=left;
-            maxRight=right;
+            minLeft=left;
+            minRight=right;
         }
         if(currentMinSum>0)
         {
@@ -37,7 +37,7 @@ int minSumSubArray(std::vector<int>vect)
         }
     }
     cout<<"Min contiguous subarray is:"<<endl;
-    for(int i=maxLeft;i<=maxRight;i++)
+    for(int i=minLeft;i<=minRight;i++)
     {
         cout<<vect[i]<<' ';
     }
